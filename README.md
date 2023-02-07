@@ -8,3 +8,6 @@ Backend: Strapi Headless CMS API
 Frontend: ReactJS
 Strapi:
 ``npx create-strapi-app@latest server``
+
+NPM imports:
+``npm i @mui/material @emotion/react @emotion/styled @mui/icons-material react-router-dom@6 react-redux @reduxjs/toolkit formik yup dotenv react-responsive-carousel``
