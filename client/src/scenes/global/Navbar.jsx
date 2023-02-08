@@ -9,9 +9,12 @@ import {
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { shades } from "../../theme";
+import { setIsCartOpen } from "../../state";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
 
   return (
     <Box
@@ -41,20 +44,36 @@ const Navbar = () => {
           display='flex'
           justifyContent='space-between'
           columnGap='20px'
-          zIndex="2">
-            <IconButton sx={{color: "black"}}>
-                <SearchOutlined />
+          zIndex='2'>
+          <IconButton sx={{ color: "black" }}>
+            <SearchOutlined />
+          </IconButton>
+          <IconButton sx={{ color: "black" }}>
+            <PersonOutline />
+          </IconButton>
+          <Badge
+            badgeContent={cart.length}
+            color='secondary'
+            invisible={cart.length === 0}
+            sx={{
+              "&.MuiBadge-badge": {
+                right: 5,
+                top: 5,
+                padding: "0 4px",
+                height: "14px",
+                minWidth: "13px",
+              },
+            }}>
+            <IconButton
+              onClick={() => dispatch(setIsCartOpen({}))}
+              sx={{ color: "black" }}>
+              <ShoppingBagOutlined />
             </IconButton>
-            <IconButton sx={{color: "black"}}>
-                <PersonOutline />
-            </IconButton>
-            <IconButton sx={{color: "black"}}>
-                <ShoppingBagOutlined />
-            </IconButton>
-            <IconButton sx={{color: "black"}}>
-                <MenuOutlined />
-            </IconButton>
-          </Box>
+          </Badge>
+          <IconButton sx={{ color: "black" }}>
+            <MenuOutlined />
+          </IconButton>
+        </Box>
       </Box>
     </Box>
   );
