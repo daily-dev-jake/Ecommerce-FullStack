@@ -36,7 +36,7 @@ const Navbar = () => {
         alignItems='center'>
         <Box
           onClick={() => navigate("/")}
-          sx={{ "&hover": { cursor: "pointer" } }}
+          sx={{ "&hover": { cursor: "pointer" } }} // when mouse cursor hover into this box it will turn into a pointer
           color={shades.secondary[500]}>
           ECOMMER
         </Box>
@@ -65,7 +65,7 @@ const Navbar = () => {
               },
             }}>
             <IconButton
-              onClick={() => dispatch(setIsCartOpen({}))}
+              onClick={() => dispatch(setIsCartOpen({}))} // pass in empty object and trigger setIsCartOpen func to update its boolean within store
               sx={{ color: "black" }}>
               <ShoppingBagOutlined />
             </IconButton>

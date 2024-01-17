@@ -7,8 +7,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import styled from "@emotion/styled";
-import { shades } from "../../theme";
-import { decreaseCount, increaseCount } from "../../state";
+import { shades } from "../theme";
+import { decreaseCount, increaseCount } from "../state";
 import { addToCart } from "../state";
 const Item = ({ item, width }) => {
   const navigate = useNavigate();
@@ -49,7 +49,10 @@ const Item = ({ item, width }) => {
           left='0'
           width='100%'
           padding='0 5%'>
+
           <Box display='flex' justifyContent='space-between'>
+          
+            {/* AMOUNT */}
             <Box
               display='flex'
               alignItems='center'

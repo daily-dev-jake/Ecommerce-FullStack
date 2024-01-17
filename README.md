@@ -4,10 +4,12 @@
 ---
 
 ### Tech Stack used:
-Backend: Strapi Headless CMS API
-Frontend: ReactJS
-Strapi:
+- Backend: Strapi Headless CMS API
+- Frontend: ReactJS
+- Strapi: 
 ``npx create-strapi-app@latest server``
+- Formik
+- yup validation
 
-NPM imports:
+### NPM imports:
 ``npm i @mui/material @emotion/react @emotion/styled @mui/icons-material react-router-dom@6 react-redux @reduxjs/toolkit formik yup dotenv react-responsive-carousel``

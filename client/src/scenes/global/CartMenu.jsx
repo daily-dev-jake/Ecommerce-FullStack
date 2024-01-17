@@ -68,8 +68,10 @@ const CartMenu = () => {
           {/* CART LIST */}
           <Box>
             {cart.map((item) => (
+
               <Box key={`${item.attributes.name}-${item.id}`}>
                 <FlexBox p='15px 0'>
+                
                   {/* ITEM IMAGE */}
                   <Box flex='1 1 40%'>
                     <img
